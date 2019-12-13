@@ -21,13 +21,31 @@ public class Zoom extends Effets{
     
     public void executeEffet()
 	{
-            for(int i=1; i<=100; i++){
-                int size=bandeau.getFont().getSize();
-               Font f = new Font(null, Font.BOLD, size+i);
+        for(Integer i=1; i<=100; i++){
+            int size=bandeau.getFont().getSize();
+            Font f = new Font(null, Font.BOLD, size+i);
+
+        bandeau.setFont(f);
+
+        bandeau.sleep(10);
+        }
+	}
+
+	public void executeEffectAvecSens(boolean sens){
+        for(Integer i=1; i<=100; checkSens(sens, i)){
+            int size=bandeau.getFont().getSize();
+            Font f = new Font(null, Font.BOLD, size+i);
 
             bandeau.setFont(f);
-            
+
             bandeau.sleep(10);
-            }
         }
+    }
+	private void checkSens(boolean b,Integer i){
+        if (b) {
+            i++;
+        } else {
+            i--;
+        }
+    }
 }

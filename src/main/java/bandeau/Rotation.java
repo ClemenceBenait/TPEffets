@@ -9,14 +9,13 @@ package bandeau;
  *
  * @author plafaye
  */
-public class Rotation extends Effets
-{
-     public Bandeau bandeau;
-     
-	public void executeEffet()
-	{
-            for(int i=1; i<=18; i++){
-		bandeau.setRotation(10);
-                bandeau.sleep(10);
+public class Rotation extends Effets {
+	public Bandeau bandeau;
+
+	public void executeEffet() {
+		for (int i = 1; i <= 18; i++) {
+			bandeau.setRotation(10);
+			bandeau.sleep(10);
+		}
 	}
 }
