@@ -5,6 +5,7 @@
  */
 package bandeau;
 import java.awt.Font;
+import java.util.Random;
 
 
 /**
@@ -20,14 +21,9 @@ public class Zoom extends Effets{
     }
     
     public void executeEffet(){
-        for(int i=1; i<=100; i++){
-            int size=bandeau.getFont().getSize();
-            Font f = new Font(null, Font.BOLD, size+i);
+        Random r = new Random();
+        executeEffectAvecSens(r.nextBoolean());
 
-        bandeau.setFont(f);
-
-        bandeau.sleep(10);
-        }
 	}
 
 	public void executeEffectAvecSens(boolean sens){
