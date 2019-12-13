@@ -15,8 +15,13 @@ public class ExempleDUtilisation {
         Color back = monBandeau.getBackground();
         Color fore = monBandeau.getForeground();
 
-        monBandeau.setMessage("Hello");
-        
+        monBandeau.setMessage("M. Faucher le best");
+
+		Scenario s2 = new Scenario(monBandeau);
+		s2.addEffets(new JeuDuPendu(monBandeau),1);
+		s2.executeScenario();
+
+
         Scenario s1 =new Scenario(monBandeau);    
         s1.addEffets(new Rotation(monBandeau),2);
         s1.addEffets(new Clignotant(monBandeau),1);
@@ -24,7 +29,7 @@ public class ExempleDUtilisation {
         s1.addEffets(new Zoom(monBandeau),1);
         s1.executeScenario();
         
-        
+        /*
 	monBandeau.sleep(1000);
 	monBandeau.setMessage("On va changer de police");
 	monBandeau.sleep(1000);
@@ -63,5 +68,9 @@ public class ExempleDUtilisation {
 	monBandeau.setForeground(fore);
 	monBandeau.setBackground(back);
 	monBandeau.setMessage("Termine");
+    */
+
    }
+
+
 }

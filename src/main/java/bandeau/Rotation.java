@@ -1,5 +1,7 @@
 package bandeau;
 
+import java.util.Random;
+
 /**
  *
  * @author plafaye
@@ -12,14 +14,8 @@ public class Rotation extends Effets{
      }
      
 	public void executeEffet(){
-		/*
-		for(float i=0; i<=Math.PI*2; i+=0.1){
-			bandeau.setRotation(i);
-			bandeau.sleep(10);
-		}
-
-		*/
-		executeEffectAvecSens(true);
+		Random r = new Random();
+		executeEffectAvecSens(r.nextBoolean());
 		bandeau.setRotation(0.0);
 	}
 
