@@ -22,10 +22,11 @@ public class Scenario
 	
 	private List<Effets> listEffets = new LinkedList<>();
 	
-	public void addEffets( Effets e)
+	public void addEffets( Effets e, int nbRep)
 	{
-		listEffets.add(e);
-                
+            for(int i=1; i<=nbRep; i++){
+            listEffets.add(e);
+            }    
 	}
 	
 	public void executeScenario( )
