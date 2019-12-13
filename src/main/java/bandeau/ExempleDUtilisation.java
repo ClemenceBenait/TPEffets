@@ -17,8 +17,11 @@ public class ExempleDUtilisation {
 
         monBandeau.setMessage("Hello");
         
-        Scenario s1 =new Scenario(monBandeau);
-        s1.addEffets(new Zoom(monBandeau));
+        Scenario s1 =new Scenario(monBandeau);    
+        s1.addEffets(new Rotation(monBandeau),2);
+        s1.addEffets(new Clignotant(monBandeau),1);
+        s1.addEffets(new Teletype(monBandeau),1);
+        s1.addEffets(new Zoom(monBandeau),1);
         s1.executeScenario();
         
         
