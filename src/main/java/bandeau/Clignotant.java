@@ -19,7 +19,7 @@ public class Clignotant extends Effets{
 	{
             Color couleur= bandeau.getForeground();
             
-            for(int i=1; i<=10; i++){
+            for(int i=1; i<=5; i++){
 		bandeau.setForeground(bandeau.getBackground());
                 bandeau.sleep(500);
                 bandeau.setForeground(couleur);

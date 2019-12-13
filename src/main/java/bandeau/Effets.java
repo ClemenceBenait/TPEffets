@@ -10,13 +10,7 @@ package bandeau;
  * @author plafaye
  */
 public abstract class Effets
-{
-	private Scenario nom;
-        public int nbRepetition;
-
-    public void setNbRepetition(int nbRepetition) {
-        this.nbRepetition = nbRepetition;
-    }        
+{    
 	
    public abstract void executeEffet();
 	

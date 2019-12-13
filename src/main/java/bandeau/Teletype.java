@@ -10,10 +10,21 @@ package bandeau;
  * @author plafaye
  */
 public class Teletype extends Effets {
+    
+    public Bandeau bandeau;
+
+    public Teletype(Bandeau bandeau) {
+        this.bandeau = bandeau;
+    }
 
     @Override
     public void executeEffet() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+      String message =  bandeau.getMessage();
+      int nbLettres = message.length();
+      for(int i=0; i<=nbLettres; i++){
+          bandeau.setMessage(message.substring(0, i));
+          bandeau.sleep(500);
+        }
     }
-    
 }
+    
