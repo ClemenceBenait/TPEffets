@@ -13,10 +13,15 @@ public class Rotation extends Effets
 {
      public Bandeau bandeau;
      
+      public Rotation(Bandeau bandeau) {
+        this.bandeau = bandeau;
+    }
+     
 	public void executeEffet()
 	{
-            for(int i=1; i<=18; i++){
-		bandeau.setRotation(10);
+            for(float i=0; i<=Math.PI*2; i+=0.1){             
+		bandeau.setRotation(i);
                 bandeau.sleep(10);
-	}
-}
+               }
+            bandeau.setRotation(0.0);
+}}
