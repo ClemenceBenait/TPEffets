@@ -24,7 +24,7 @@ public class Teletype extends Effets {
       for(int i=0; i<=nbLettres; i++){
           bandeau.setMessage(message.substring(0, i));
           bandeau.sleep(500);
-        }
+      }
     }
 }
     

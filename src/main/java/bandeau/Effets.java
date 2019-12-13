@@ -13,5 +13,5 @@ public abstract class Effets
 {    
 	
    public abstract void executeEffet();
-	
+
 }

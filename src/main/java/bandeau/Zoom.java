@@ -19,15 +19,36 @@ public class Zoom extends Effets{
         this.bandeau = bandeau;
     }
     
-    public void executeEffet()
-	{
-            for(int i=1; i<=100; i++){
-                int size=bandeau.getFont().getSize();
-               Font f = new Font(null, Font.BOLD, size+i);
+    public void executeEffet(){
+        for(int i=1; i<=100; i++){
+            int size=bandeau.getFont().getSize();
+            Font f = new Font(null, Font.BOLD, size+i);
 
-            bandeau.setFont(f);
-            
-            bandeau.sleep(10);
+        bandeau.setFont(f);
+
+        bandeau.sleep(10);
+        }
+	}
+
+	public void executeEffectAvecSens(boolean sens){
+        if (sens){
+            for(int i = 0; i<=100; i++){
+                int size=bandeau.getFont().getSize();
+                Font f = new Font(null, Font.BOLD, size+i);
+
+                bandeau.setFont(f);
+
+                bandeau.sleep(10);
+            }
+        }else{
+            for(int i = 0; i<=100; i++){
+                int size=bandeau.getFont().getSize();
+                Font f = new Font(null, Font.BOLD, size-i);
+
+                bandeau.setFont(f);
+
+                bandeau.sleep(10);
             }
         }
+    }
 }
