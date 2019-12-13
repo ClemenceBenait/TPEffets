@@ -16,6 +16,12 @@ public class ExempleDUtilisation {
         Color fore = monBandeau.getForeground();
 
         monBandeau.setMessage("Hello");
+        
+        Scenario s1 =new Scenario(monBandeau);
+        s1.addEffets(new Zoom(monBandeau));
+        s1.executeScenario();
+        
+        
 	monBandeau.sleep(1000);
 	monBandeau.setMessage("On va changer de police");
 	monBandeau.sleep(1000);
